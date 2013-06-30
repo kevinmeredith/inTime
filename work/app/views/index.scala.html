@@ -1,0 +1,19 @@
+@(message: String)
+
+@main("inTime") {
+    
+<!doctype html>
+<html lang="en" ng-app='myApp'>
+	<head>
+		<link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/main.css")">
+	</head>
+<div ng-controller="Controller">
+    <table border="1">
+    <tbody ng-repeat='day in days'>
+		<tr>{{day}}</tr>
+    </tbody>
+  </table>
+</div>
+</html>	
+    
+}
