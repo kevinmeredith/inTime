@@ -3,17 +3,30 @@
 @main("inTime") {
     
 <!doctype html>
-<html lang="en" ng-app='myApp'>
+<html ng-app='MyModule'>
 	<head>
 		<link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/main.css")">
 	</head>
-<div ng-controller="Controller">
-    <table border="1">
-    <tbody ng-repeat='day in days'>
-		<tr>{{day}}</tr>
-    </tbody>
-  </table>
-</div>
+  <div ng-controller="Controller">
+    <table border='1' width='400'>
+        <tbody>
+		  <tr>
+			<td class='day' ng-repeat='day in days'>{{day}}</td>
+		  </tr>
+		  <tr ng-repeat='x in chargeNumbers'>
+			<td>
+				<input placeholder='Enter Charge #'>
+			</td>
+			<td ng-repeat='t in [1,2,3,4,5,6,7]'>
+				<input type="number" min='0.5' max='24' step='0.5'>
+			</td>
+		  </tr>
+	  </tbody>
+    </table>
+	
+	<button ng-click="addNewChargeNumber()">Add Charge Number</button>
+	
+  </div>
 </html>	
     
 }

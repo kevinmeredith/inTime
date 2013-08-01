@@ -1,0 +1,7 @@
+input[type='number'], .day {
+    width:5em;
+}
+
+input[placeholder] {
+	width:10em;
+}
